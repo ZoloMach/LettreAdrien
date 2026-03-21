@@ -31,16 +31,16 @@ RÈGLES STRICTES :
 - Vise entre 1350 et 1490 caractères pour être safe.
 - Pas de formule de politesse type "Madame, Monsieur" ni de signature.
 - Pas de titre ni d'en-tête.
-- Ton naturel mais sérieux. Pas de phrases creuses ou clichés.
-- Structure claire : accroche → parcours/motivations → compétences/expériences → projection dans la formation.
-- Utilise des éléments CONCRETS du profil de l'élève.
-- Adapte le vocabulaire et les arguments à la formation visée.
-- La lettre doit donner l'impression qu'elle a été écrite par un lycéen motivé, pas par une IA.
-- Écris en français.
+- Ton sincère, direct, naturel — celui d'un lycéen de terminale qui s'exprime bien mais pas comme un adulte.
+- Phrases courtes. Vocabulaire simple et concret. Zéro mot compliqué inutile (pas de "catalyseur", "vecteur", "paradigme", etc.).
+- Pas de tournures trop formelles ou littéraires. Un lycéen motivé écrit clairement, pas pompeusement.
+- Structure claire : accroche → pourquoi cette formation → ce qu'il apporte → ce qu'il en attend.
+- Utilise des éléments CONCRETS du profil. Pas de généralités.
+- La lettre doit sonner vrai, comme si Adrien l'avait écrite lui-même après réflexion.
 - Mets en avant son côté entrepreneur et déterminé sans en faire trop.
-- Le sport (judo + foot en club pendant des années) montre sa discipline, sa persévérance et son esprit d'équipe — utilise-le intelligemment, pas comme un cliché.
-- Le stage chez L'Oréal est un vrai atout différenciant — exploite-le bien.
-- Il veut entreprendre, donc la formation est un tremplin vers son projet, pas une fin en soi.`
+- Le sport (judo + foot en club pendant des années) montre sa discipline et sa persévérance — utilise-le sobrement, pas comme un cliché.
+- Le stage chez L'Oréal est un vrai atout différenciant — exploite-le concrètement.
+- Il veut entreprendre : la formation est un tremplin, pas une fin en soi.`
 
 app.post('/api/generate', async (req, res) => {
   const { formation } = req.body
