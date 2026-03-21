@@ -33,6 +33,7 @@ RÈGLES STRICTES :
 - Pas de titre ni d'en-tête.
 - Ton sincère, direct, naturel — celui d'un lycéen de terminale qui s'exprime bien mais pas comme un adulte.
 - Phrases courtes. Vocabulaire simple et concret. Zéro mot compliqué inutile (pas de "catalyseur", "vecteur", "paradigme", etc.).
+- INTERDIT : les tirets (—, -, –) dans les phrases. Reformule toujours avec une virgule, un point ou une nouvelle phrase.
 - Pas de tournures trop formelles ou littéraires. Un lycéen motivé écrit clairement, pas pompeusement.
 - Structure claire : accroche → pourquoi cette formation → ce qu'il apporte → ce qu'il en attend.
 - Utilise des éléments CONCRETS du profil. Pas de généralités.
