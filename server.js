@@ -106,12 +106,28 @@ ${formationContent}
 RAPPEL CRITIQUE : 1500 caractères MAX espaces compris. Vise 1400-1490.
 RAPPEL : intègre un élément SPÉCIFIQUE à cette formation qui a attiré Adrien. Si dimension internationale, mentionne la double nationalité franco-libanaise.`
 
-    const response = await client.messages.create({
-      model: 'claude-sonnet-4-6',
-      max_tokens: 1000,
-      system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content: userPrompt }],
-    })
+    let response
+    const maxRetries = 4
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        response = await client.messages.create({
+          model: 'claude-sonnet-4-6',
+          max_tokens: 1000,
+          system: SYSTEM_PROMPT,
+          messages: [{ role: 'user', content: userPrompt }],
+        })
+        break
+      } catch (err) {
+        const isOverloaded = err.status === 529 || err.status === 529
+        if (isOverloaded && attempt < maxRetries) {
+          const wait = attempt * 3000
+          console.log(`API surchargée, retry ${attempt}/${maxRetries - 1} dans ${wait / 1000}s...`)
+          await new Promise(r => setTimeout(r, wait))
+        } else {
+          throw err
+        }
+      }
+    }
 
     const text = response.content.filter(b => b.type === 'text').map(b => b.text).join('')
     res.json({ letter: text })
